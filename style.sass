@@ -1,0 +1,50 @@
+@import reset
+@import './normalize.css'
+
+    
+body
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    height: 100%
+
+#hamburger
+    margin-right: 0.5em
+    display: none
+
+#navbar
+    background-color: #eaebed !important
+    display: flex
+    #menu
+        display: flex
+        justify-content: flex-end
+        width: 350px
+        margin-left: auto
+
+
+.nav-link
+    color: rgba(0, 0, 0, 0.7)
+
+.active
+    color: black
+
+
+@media only screen and (max-width: 480px)
+    #navbar
+        #menu
+            display: none
+        #hamburger
+            display: block
+
+
+.hidden
+    display: none
+
+    
+.visible
+    display: block
+
+
+#side-nav
+    height: 100%
+    width: 100%
