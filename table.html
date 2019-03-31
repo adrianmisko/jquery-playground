@@ -12,7 +12,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
-    <a class="navbar-brand" href="#">Logo</a>
+    <a class="navbar-brand" href="/">Logo</a>
     <div id="menu">
       <a href="dndlist.html" class="nav-link">Page 1</a>
       <a href="table.html" class="nav-link">Page 2</a>
@@ -30,8 +30,40 @@
     </ul>
   </div>
   <div id="content">
-    Page table
+    <div class="jumbo">
+    <table id="table" class="table">
+      <tr>
+        <td>Sample data</td>
+        <td>Sample data</td>
+        <td>Sample data</td>
+        <td>Sample data</td>
+        <td><button class="btn btn-danger">Remove</button></td>
+      </tr>
+      <tr>
+        <td>Sample data</td>
+        <td>Sample data</td>
+        <td>Sample data</td>
+        <td>Sample data</td>
+        <td><button class="btn btn-danger">Remove</button></td>
+      </tr>
+      <tr>
+        <td>Sample data</td>
+        <td>Sample data</td>
+        <td>Sample data</td>
+        <td>Sample data</td>
+        <td><button class="btn btn-danger">Remove</button></td>
+      </tr>
+      <tr>
+        <td>Sample data</td>
+        <td>Sample data</td>
+        <td>Sample data</td>
+        <td>Sample data</td>
+        <td><button class="btn btn-danger">Remove</button></td>
+      </tr>
+    </table>
+    <button class="btn btn-warning" id="addRowBtn">Add row</button> 
   </div>
+</div>
 </body>
 <script
   src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"
@@ -43,4 +75,5 @@
 ></script>
 <script src="script.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="editableTableWidget.js"></script>
 </html>

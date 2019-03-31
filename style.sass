@@ -15,8 +15,14 @@ body, html
     display: none
 
 #navbar
-    background-color: #eaebed !important
+    background-color: #d1d2d3 !important
     display: flex
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 999
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6)
     #menu
         display: flex
         justify-content: flex-end
@@ -31,12 +37,29 @@ body, html
     color: black
 
 
+#content
+    position: relative
+    top: 36px
+    .jumbo
+        ul, li
+            transition: width 0.5s ease-in
+
 @media only screen and (max-width: 480px)
     #navbar
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 999
         #menu
             display: none
         #hamburger
             display: block
+    #content
+        .jumbo
+            ul, li
+                width: 100%
+                margin: 0
 
 
 .hidden
@@ -56,15 +79,17 @@ body, html
 .nav-link
     color: black
 
-.nav-link
     
 #side-nav
+    z-index: 999
+    position: fixed
+    top: 58px
+    width: 100%
+    height: 100%
     ul
         padding: 0
-        text-align: center
-        width: 100%
         height: 100%
-        position: fixed
+        text-align: center
         background-color: $bg-light
         li 
             white-space: nowrap
@@ -76,7 +101,7 @@ body, html
 #content
     max-width: 900px
     width: 100%
-    margin: 1em auto
+    margin: 2.5em auto
 
 .jumbo
     text-align: center
@@ -89,6 +114,14 @@ body, html
     margin-top: 2em
     width: 200px
 
+#addRowBtn
+    margin-top: 0.75em
+    float: right
+    width: 140px
+
+#table
+    text-align: center
+
 #content
     ul
         width: 75%
@@ -96,3 +129,16 @@ body, html
         a   
             font-weight: 401
             color: black
+
+.index
+    margin-top: 1em
+    height: 200px
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+.gray
+    background-color: $bg-light
+
+.white
+    background-color: white

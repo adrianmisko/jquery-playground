@@ -24,8 +24,14 @@ body, html {
   display: none; }
 
 #navbar {
-  background-color: #eaebed !important;
-  display: flex; }
+  background-color: #d1d2d3 !important;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
   #navbar #menu {
     display: flex;
     justify-content: flex-end;
@@ -38,11 +44,27 @@ body, html {
 .active {
   color: black; }
 
+#content {
+  position: relative;
+  top: 36px; }
+  #content .jumbo ul, #content .jumbo li {
+    transition: width 0.5s ease-in; }
+
 @media only screen and (max-width: 480px) {
-  #navbar #menu {
-    display: none; }
-  #navbar #hamburger {
-    display: block; } }
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; }
+    #navbar #menu {
+      display: none; }
+    #navbar #hamburger {
+      display: block; }
+
+  #content .jumbo ul, #content .jumbo li {
+    width: 100%;
+    margin: 0; } }
 .hidden {
   display: none; }
 
@@ -60,24 +82,28 @@ body, html {
 .nav-link {
   color: black; }
 
-#side-nav ul {
-  padding: 0;
-  text-align: center;
-  width: 100%;
-  height: 100%;
+#side-nav {
+  z-index: 999;
   position: fixed;
-  background-color: #eaebed; }
-  #side-nav ul li {
-    white-space: nowrap;
-    overflow: hidden;
-    margin: 1em 0; }
-#side-nav ul:first-child {
-  padding-top: 1em; }
+  top: 58px;
+  width: 100%;
+  height: 100%; }
+  #side-nav ul {
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    background-color: #eaebed; }
+    #side-nav ul li {
+      white-space: nowrap;
+      overflow: hidden;
+      margin: 1em 0; }
+  #side-nav ul:first-child {
+    padding-top: 1em; }
 
 #content {
   max-width: 900px;
   width: 100%;
-  margin: 1em auto; }
+  margin: 2.5em auto; }
 
 .jumbo {
   text-align: center;
@@ -90,11 +116,32 @@ body, html {
   margin-top: 2em;
   width: 200px; }
 
+#addRowBtn {
+  margin-top: 0.75em;
+  float: right;
+  width: 140px; }
+
+#table {
+  text-align: center; }
+
 #content ul {
   width: 75%;
   margin: 0 auto; }
   #content ul a {
     font-weight: 401;
     color: black; }
+
+.index {
+  margin-top: 1em;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.gray {
+  background-color: #eaebed; }
+
+.white {
+  background-color: white; }
 
 /*# sourceMappingURL=style.css.map */
