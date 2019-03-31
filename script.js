@@ -160,6 +160,7 @@ const changePage = path => {
 $(() => {
 
     $('#content').hide();
+    console.log(location.pathname)
     changePage(location.pathname);
 
     $('#hamburger').click(() => {
